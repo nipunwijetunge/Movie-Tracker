@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchMovie"
+    android:id="@+id/search_relative_layout">
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        android:ems="10"
+        android:hint="@string/search_bar_hint"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/search_movie_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="154dp"
+        android:text="@string/look_up"
+        android:background="@drawable/button_bg"
+        android:onClick="search"/>
+
+    <TextView
+        android:id="@+id/edit_movie_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/expletus_sans"
+        android:text="@string/search_movie_header"
+        android:textSize="30sp"
+        android:textStyle="italic" />
+
+    <ScrollView
+        android:id="@+id/edit_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/search_movie_btn"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true">
+
+        <ListView
+            android:id="@+id/search_listView"
+            android:layout_width="match_parent"
+            android:layout_height="569dp"
+            android:layout_marginTop="10dp" />
+    </ScrollView>
+</RelativeLayout>

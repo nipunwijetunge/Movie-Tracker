@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_register_movie"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="328dp"
+        android:text="@string/register_movie_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/button_bg"
+        android:onClick="registerMovieLauncher"/>
+
+    <Button
+        android:id="@+id/button_display_movies"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/display_movies_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/button_bg"
+        android:onClick="displayMoviesLauncher"/>
+
+    <Button
+        android:id="@+id/button_favourites"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/favourites_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_register_movie"
+        android:background="@drawable/button_bg"
+        android:onClick="favouriteMoviesLauncher"/>
+
+    <Button
+        android:id="@+id/button_edit_movies"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/edit_movies_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_display_movies"
+        android:background="@drawable/button_bg"
+        android:onClick="editMovieLauncher"/>
+
+    <Button
+        android:id="@+id/button_search_movies"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/search_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_favourites"
+        android:background="@drawable/button_bg"
+        android:onClick="searchMovieLauncher"/>
+
+    <Button
+        android:id="@+id/button_ratings"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/ratings_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_edit_movies"
+        android:background="@drawable/button_bg"
+        android:onClick="movieRatingsLauncher"/>
+
+    <ImageView
+        android:id="@+id/imageView_main"
+        android:layout_width="241dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

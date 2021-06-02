@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditMovie"
+    android:id="@+id/edit_relative_layout">
+
+    <TextView
+        android:id="@+id/edit_movie_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/expletus_sans"
+        android:text="Edit your movies,"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/edit_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@+id/edit_movie_header"
+        android:fillViewport="true">
+
+        <ListView
+            android:id="@+id/edit_listView"
+            android:layout_width="match_parent"
+            android:layout_height="569dp"
+            android:layout_marginTop="10dp" />
+    </ScrollView>
+
+</RelativeLayout>

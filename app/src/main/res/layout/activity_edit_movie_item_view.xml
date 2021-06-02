@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".EditMovieItemView">
+
+    <TextView
+        android:id="@+id/edit_fav_label"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_fav_checkbox"
+        android:layout_toEndOf="@+id/edit_year_picker"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="7dp"
+        android:textAlignment="center" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_movie_title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="215dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/edit_movie_header"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:ems="10"
+        android:hint="@string/title_hint"
+        android:inputType="textPersonName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/edit_fav_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/edit_movie_title"
+        android:layout_below="@+id/edit_movie_header"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="25dp"
+        android:scaleX="2.00"
+        android:scaleY="2.00"
+        android:button="@drawable/checkbox_selector"
+        style="?android:attr/starStyle"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_movie_year"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/edit_movie_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:hint="@string/year_hint"
+            android:maxLength="4" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <NumberPicker
+        android:id="@+id/edit_year_picker"
+        android:layout_width="53dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@+id/edit_movie_year"
+        android:layout_below="@+id/edit_movie_title"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_movie_director"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="215dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/edit_movie_year">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/director_hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_movie_cast"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:ems="10"
+        android:layout_below="@+id/edit_movie_director">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/cast_hint"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RatingBar
+        android:id="@+id/edit_ratingBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/edit_movie_cast"
+        android:stepSize="1"
+        android:numStars="5"
+        android:progressTint="#fdd835" />
+
+    <RatingBar
+        android:id="@+id/edit_ratingBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-13dp"
+        android:layout_below="@+id/edit_ratingBar1"
+        android:stepSize="1"
+        android:numStars="5"
+        android:progressTint="#fdd835" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_movie_review"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/edit_ratingBar2"
+        android:layout_marginStart="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/reviews_hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/edit_movie_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="@string/update_btn"
+        android:layout_below="@+id/edit_movie_review"
+        android:layout_centerHorizontal="true"
+        android:onClick="updateMovie"/>
+
+        <TextView
+            android:id="@+id/edit_movie_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/expletus_sans"
+            android:text="@string/update_movie_header"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+
+</RelativeLayout>
+</ScrollView>
